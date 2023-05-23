@@ -1,9 +1,12 @@
-import Form from './components/Form';
-import Posts from './components/Posts';
-import TodoItem from './components/TodoItem';
-import User from './components/User';
+import { useSelector } from 'react-redux';
+import Posts from './components/posts/Posts';
+import Form from './components/todos/Form';
+import TodoItem from './components/todos/TodoItem';
+import User from './components/user/User';
 
 function App() {
+  const todos = useSelector((state) => state.todo.todos);
+
   return (
     <div className="min-h-screen h-full w-screen bg-indigo-400">
       <div className="container mx-auto px-4">
@@ -15,7 +18,9 @@ function App() {
           <div className="w-1/3">
             <h1 className="font-bold my-5">Redux Toolkit Todo App</h1>
             <Form />
-            <TodoItem />
+            {todos?.map((todo) => (
+              <TodoItem key={todo.id} {...todo} />
+            ))}
           </div>
           <div className="w-1/3">
             <h1 className="font-bold my-5">Redux Toolkit Async Thunk</h1>

@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { setFirstName, setLastName } from '../features/user/userSlice';
+import { setFirstName, setLastName } from '../../features/user/userSlice';
 import FirstName from './FirstName';
 import LastName from './LastName';
 
