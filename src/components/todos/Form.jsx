@@ -22,7 +22,7 @@ const Form = () => {
       <input
         type="text"
         value={todoValue}
-        placeholder="Type something..."
+        placeholder="Type any todo..."
         className="w-full p-1 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm"
         onChange={(e) => setTodoValue(e.target.value)}
       />

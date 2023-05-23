@@ -16,7 +16,7 @@ const User = () => {
       />
       <input
         type="text"
-        placeholder="Second Name"
+        placeholder="Last Name"
         className="w-full p-1 mb-2 focus:outline-none focus:border-lime-500 focus: border-2 placeholder:text-sm"
         onChange={(e) => dispatch(setLastName(e.target.value))}
       />
