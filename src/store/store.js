@@ -1,12 +1,12 @@
 import { configureStore } from '@reduxjs/toolkit';
-import postSlice from '../features/post/postSlice';
-import todoSlice from '../features/todo/todoSlice';
-import userSlice from '../features/user/userSlice';
+import postReducer from './slices/postSlice';
+import todoReducer from './slices/todoSlice';
+import userReducer from './slices/userSlice';
 
 export const store = configureStore({
   reducer: {
-    user: userSlice,
-    todo: todoSlice,
-    post: postSlice,
+    user: userReducer,
+    todo: todoReducer,
+    post: postReducer,
   },
 });

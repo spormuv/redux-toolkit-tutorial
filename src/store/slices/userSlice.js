@@ -5,8 +5,8 @@ const initialState = {
   lastName: '',
 };
 
-export const userSlice = createSlice({
-  name: 'user',
+const userSlice = createSlice({
+  name: 'users',
   initialState,
   reducers: {
     setFirstName(state, action) {
